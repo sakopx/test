@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+
+<style>
+body { /*網頁本文 內外距為0 文字大小為16px*/
+  margin:0;
+  padding:0; 
+  font-size:16px;
+}
+
+.water { position: absolute; /*指定位置：父層為基準點*/
+  		width:100%;
+  		height:100%;
+  		background-image:linear-gradient( #FFF, #0F0 );/*線性漸層*/
+}
+
+.ptsu { position: absolute; 
+  		left:10%;
+  		width:80%;
+  		height:100%;
+		animation-name:ptsu1; /*動畫名稱：fish*/
+		animation-duration: 5s;	
+		animation-iteration-count: infinite;
+}
+
+.face { position:absolute;
+  		background-color:#dc9997;
+  		background-image:
+    	linear-gradient(#fff 75%, #CCC);/*線性漸層 #dc9997佔60%*/
+		border-radius:50%/60% 60% 30% 30%;
+  		top:25%;
+ 		left:25%;
+ 		width:40%;
+  		height:50%; /*上下左右距離*/
+  		animation-name: face; /*animation動畫 動畫名稱：face*/
+		animation-duration: 5s;	/*設定動cj84	時間*/
+		animation-iteration-count: infinite;/*動畫重複次數：無限*/
+}
+.mouth-up{position:absolute;
+		background-color:#FF0;
+		left:40%;
+		top:43%;
+		width:11%;
+		height:12%;
+		border: solid #300 thick;
+		z-index:2;
+		border-radius:60%/70%;}
+.mouth-down{position:absolute;
+		background-color:#FF0;
+		left:42%;
+		top:55%;
+		width:8%;
+		height:10%;
+		border: solid #300 thick;
+		border-radius:60%;}
+
+.blush-left{position:absolute;
+			background:#FCC;
+			left:10%;
+			top:60%;
+			width:10%;
+			height:10%;
+			border-radius:60%;}
+.blush-right{position:absolute;
+			background:#FCC;
+			left:80%;
+			top:60%;
+			width:10%;
+			height:10%;
+			border-radius:60%;}
+.eye-right{position:absolute;
+			background:#300;
+			left:60%;
+			top:40%;
+			width:5%;
+			height:6%;
+			border-radius:50%;}
+.eye-left{position:absolute;
+			background:#300;
+			left:27%;
+			top:40%;
+			width:5%;
+			height:6%;
+			border-radius:50%;}
+@keyframes ptsu1{ /*動畫效果 名稱*/
+	0% { /*讀取0%時 y軸移動0%*/
+		transform: translateX(0%);	
+    
+	}
+	50% { /*讀取50%時 y軸移動-5%*/
+		transform: translateX(-15%);	
+	}	
+	100% {
+		transform: translateX(0%);
+	}			
+}
+@keyframes face{
+	0% {
+		width:40%;
+	}
+	50% {
+		width:45%;
+
+	}	
+	100% {width:40%;
+
+}
+}
+
+</style>
+
+</head>
+
+<body>
+<div class = "water">
+  <div class="ptsu">
+    <div class="face">
+      <div class = "left-fin">
+      </div>
+      <div class = "mouth-up">
+      </div>
+      <div class = "mouth-down">
+      </div>
+      <div class = "eye-left">
+      </div>
+      <div class = "eye-right">
+      </div>
+      <div class = "blush-left">
+      </div>
+      <div class = "blush-right">
+      </div>
+      <div class = "right-fin">
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
